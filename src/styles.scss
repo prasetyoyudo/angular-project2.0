@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+    box-sizing:  border-box;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #fff;
+    color: #222;
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+p{
+    word-break: break-all;
+}
+
+#menu-toggle:checked + #menu {
+    display: block;
+  }

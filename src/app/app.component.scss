@@ -1,0 +1,126 @@
+// #light theme
+$bg-theme-light : #fff;
+$color-theme-light : #222;
+
+// Dark theme
+$bg-theme-dark : #222;
+$color-theme-dark : #fff;
+
+li {
+    list-style-type: none;
+}
+
+.content {
+    padding: 0 20px;
+    height: 100%;
+}
+.content-box {
+    margin: 20px auto 0 auto;
+    background-color: #eee;
+    color: $color-theme-light;
+    border-radius: 8px;
+    padding: 30px 30px 40px 30px;
+    max-width: 800px;
+    h3 {
+        line-height: 1.2;
+        margin: 0;
+        font-size: 26px;
+    }
+    h5 {
+        line-height: 1.5;
+        margin: 0  0 20px 0;
+        font-size: 20px;
+    }
+}
+
+h5.title {
+    line-height: 1.5;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.theme-switcher-wrap {
+    width: 100%;
+    text-align: right;
+    margin-top: -1.5rem;
+    
+    .theme-switcher {
+        display: inline-block;
+        cursor: pointer;
+
+        .switch-path {
+            width: 40px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: #ccc;
+
+            .switch-handle {
+                background-color: #999;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                transition: all 0.3s ease-in-out;
+            }
+        
+        }
+        .theme-switcher {
+            display: none;
+        }
+        
+        &.active {
+            .switch-path{
+                background-color: #555;
+            }
+            .switch-handle {
+                transform: translateX(20px);
+                background-color: #7bbb5e;
+            }
+        }
+
+    }
+}
+
+.content.theme-dark {
+    background-color: $bg-theme-dark;
+    color: $color-theme-dark;
+    li {
+        text-decoration: none;
+    }
+    a {
+        color: #ccc;
+    }
+    .content-box {
+        background-color: #333;
+        color: #eee;
+        h3,
+        h5 {
+            color: #7bbb5e;
+        }
+        p {
+            color: #ccc;
+        }
+
+    }
+    .links {
+        a {
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .avatar {
+        width: 8rem;
+        height: 8rem;
+        margin: 3rem 6rem 3rem 6rem
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .theme-switcher-wrap {
+        width: 100%;
+        margin-left: -32rem;
+        margin-top: -2rem;
+    }
+}
